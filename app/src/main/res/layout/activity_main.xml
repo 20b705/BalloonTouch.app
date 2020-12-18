@@ -22,7 +22,8 @@
         android:text="START"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="541dp" />
+        tools:layout_editor_absoluteY="503dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
