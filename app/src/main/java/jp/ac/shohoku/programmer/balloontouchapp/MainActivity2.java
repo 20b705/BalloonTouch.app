@@ -1,6 +1,7 @@
 package jp.ac.shohoku.programmer.balloontouchapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 
 import android.os.Bundle;
 
@@ -10,5 +11,10 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        // 結果画面へ
+        Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
+        intent.putExtra("SCORE", score);
+        startActivity(intent);
     }
 }
