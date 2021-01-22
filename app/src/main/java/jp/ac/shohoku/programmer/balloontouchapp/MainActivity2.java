@@ -25,11 +25,11 @@ public class MainActivity2 extends AppCompatActivity {
 
 
         timerText = findViewById(R.id.Timer);
-        timerText.setText(dataFormat.format(10000));
+        timerText.setText(dataFormat.format(0));
 
         final CountDown countDown = new CountDown(countNumber, interval);
 
-        countDown.start();
+
     }
     class CountDown extends CountDownTimer {
         CountDown(long millisInFuture, long countDownInterval) {
