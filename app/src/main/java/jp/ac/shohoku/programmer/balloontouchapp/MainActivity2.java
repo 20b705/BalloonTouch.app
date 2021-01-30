@@ -24,13 +24,10 @@ public class MainActivity2 extends AppCompatActivity {
     private int frameWidth;
     private int screenWidth;
     private int screenHeight;
-
     private float ballonX;
     private float ballonY;
-
     private Handler handler = new Handler();
     private Timer timer = new Timer();
-
     private boolean action_flg = false;
     private boolean start_flg = false;
 
