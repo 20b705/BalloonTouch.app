@@ -24,6 +24,7 @@ public class MainActivity2 extends AppCompatActivity {
     private int frameWidth;
     private int screenWidth;
     private int screenHeight;
+
     private float ballonX;
     private float ballonY;
     private Handler handler = new Handler();
