@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.Handler;
 import android.view.Display;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -14,7 +13,6 @@ import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
-import java.util.Timer;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -27,10 +25,6 @@ public class MainActivity2 extends AppCompatActivity {
 
     private float ballonX;
     private float ballonY;
-    private Handler handler = new Handler();
-    private Timer timer = new Timer();
-    private boolean action_flg = false;
-    private boolean start_flg = false;
 
 
     private SimpleDateFormat dataFormat =
