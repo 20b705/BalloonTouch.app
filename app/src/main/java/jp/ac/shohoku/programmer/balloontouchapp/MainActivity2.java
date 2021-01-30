@@ -30,6 +30,8 @@ public class MainActivity2 extends AppCompatActivity {
         final CountDown countDown = new CountDown(countNumber, interval);
 
         countDown.start();
+
+
     }
     class CountDown extends CountDownTimer {
         CountDown(long millisInFuture, long countDownInterval) {
