@@ -10,21 +10,20 @@ import android.view.Display;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.FrameLayout;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
 public class MainActivity2 extends AppCompatActivity {
 
     private TextView timerText;
-    private ImageView ballon;
+    private ImageView balloon;
 
     private int frameWidth;
     private int screenWidth;
     private int screenHeight;
 
-    private float ballonX;
-    private float ballonY;
+    private float balloonX;
+    private float balloonY;
 
 
     private SimpleDateFormat dataFormat =
@@ -46,7 +45,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         countDown.start();
 
-        ballon = findViewById(R.id.ballon);
+        balloon = findViewById(R.id.balloon);
 
         WindowManager wm = getWindowManager();
         Display display = wm.getDefaultDisplay();
@@ -56,17 +55,17 @@ public class MainActivity2 extends AppCompatActivity {
         screenWidth = size.x;
         screenHeight = size.y;
 
-        ballon.setX(-80.0f);
-        ballon.setY(-80.0f);
+        balloon.setX(-80.0f);
+        balloon.setY(-80.0f);
     }
     public void changePos(){
-        ballonY -= 12;
-        if(ballonY < 0);{
-            ballonY = screenHeight + 20;
-            ballonX = (float)Math.floor(Math.random() * (frameWidth - ballon.getWidth()));
+        balloonY = 12;
+        if(balloonY < 0);{
+            balloonY = screenHeight + 20;
+            balloonX = (float)Math.floor(Math.random() * (frameWidth - balloon.getWidth()));
         }
-        ballon.setY(ballonY);
-        ballon.setX(ballonX);
+        balloon.setY(balloonY);
+        balloon.setX(balloonX);
     }
     class CountDown extends CountDownTimer {
         CountDown(long millisInFuture, long countDownInterval) {
