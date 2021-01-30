@@ -18,6 +18,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     private TextView timerText;
     private ImageView ballon;
+
     private int frameWidth;
     private int screenWidth;
     private int screenHeight;
