@@ -10,7 +10,7 @@ import android.view.Display;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import android.widget.FrameLayout;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
@@ -45,6 +45,8 @@ public class MainActivity2 extends AppCompatActivity {
         final CountDown countDown = new CountDown(countNumber, interval);
 
         countDown.start();
+
+        ballon = findViewById(R.id.ballon);
 
         WindowManager wm = getWindowManager();
         Display display = wm.getDefaultDisplay();
