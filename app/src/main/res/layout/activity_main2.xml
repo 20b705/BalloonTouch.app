@@ -27,12 +27,10 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/ballon"
+            android:id="@+id/balloon"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ballon">
-
-        </ImageView>
+            android:src="@drawable/balloon"/>
 
     </FrameLayout>
 
