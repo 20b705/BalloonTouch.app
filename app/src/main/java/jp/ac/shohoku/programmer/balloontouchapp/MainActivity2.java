@@ -1,16 +1,35 @@
 package jp.ac.shohoku.programmer.balloontouchapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
-import android.os.CountDownTimer;
+import android.graphics.Point;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.Handler;
+import android.view.Display;
+import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
+
 import java.text.SimpleDateFormat;
 import java.util.Locale;
+import java.util.Timer;
 
 public class MainActivity2 extends AppCompatActivity {
 
     private TextView timerText;
+    private ImageView ballon;
+    private int frameWidth;
+    private int screenWidth;
+    private int screenHeight;
+    private float ballonX;
+    private float ballonY;
+    private Handler handler = new Handler();
+    private Timer timer = new Timer();
+    private boolean action_flg = false;
+    private boolean start_flg = false;
+
 
     private SimpleDateFormat dataFormat =
             new SimpleDateFormat("mm:ss.SSS", Locale.US);
@@ -31,7 +50,25 @@ public class MainActivity2 extends AppCompatActivity {
 
         countDown.start();
 
+        WindowManager wm = getWindowManager();
+        Display display = wm.getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
 
+        screenWidth = size.x;
+        screenHeight = size.y;
+
+        ballon.setX(-80.0f);
+        ballon.setY(-80.0f);
+    }
+    public void changePos(){
+        ballonY -= 12;
+        if(ballonY < 0);{
+            ballonY = screenHeight + 20;
+            ballonX = (float)Math.floor(Math.random() * (frameWidth - ballon.getWidth()));
+        }
+        ballon.setY(ballonY);
+        ballon.setX(ballonX);
     }
     class CountDown extends CountDownTimer {
         CountDown(long millisInFuture, long countDownInterval) {
@@ -48,7 +85,6 @@ public class MainActivity2 extends AppCompatActivity {
         @Override
         public void onTick(long millisUntilFinished) {
             timerText.setText(dataFormat.format(millisUntilFinished));
-
         }
     }
 }
