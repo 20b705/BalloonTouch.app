@@ -19,6 +19,7 @@ public class MainActivity2 extends AppCompatActivity {
     private ImageView balloon;
 
     private int frameWidth;
+    private int frameHeight;
     private int screenWidth;
     private int screenHeight;
 
@@ -59,7 +60,7 @@ public class MainActivity2 extends AppCompatActivity {
         balloon.setY(-80.0f);
     }
     public void changePos(){
-        balloonY = 12;
+        balloonY -= 12;
         if(balloonY < 0);{
             balloonY = screenHeight + 20;
             balloonX = (float)Math.floor(Math.random() * (frameWidth - balloon.getWidth()));
