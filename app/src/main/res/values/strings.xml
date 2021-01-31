@@ -3,4 +3,5 @@
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="return_button">トップへ</string>
+    <string name="img_description2" />
 </resources>

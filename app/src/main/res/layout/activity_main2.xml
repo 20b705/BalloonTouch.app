@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="#4621C9F3">
 
+
     <EditText
         android:id="@+id/Timer"
         android:layout_width="88dp"
@@ -19,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
-        android:id="@+id/scoreLabel"
+        android:id="@+id/frame"
         android:layout_width="404dp"
         android:layout_height="671dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,13 +28,10 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/ballon"
+            android:id="@+id/balloon"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ballon">
-
-        </ImageView>
-
+            android:src="@drawable/balloon"/>
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
